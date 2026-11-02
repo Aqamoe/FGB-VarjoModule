@@ -1,0 +1,20 @@
+FGB VarjoModule
+Copyright 2026 Aqamoe (光水)
+
+This product includes a copy of fgb_module_api.h from FaceGaze Bridge
+(https://github.com/Aqamoe/FaceGaze-Bridge), licensed under the Apache
+License, Version 2.0. The header is resolved at build time from the release
+pinned in sdk.lock.json; this repository does not contain a copy of it.
+
+The Varjo C API surface used by this module (function names, struct layouts,
+status semantics and units) was informed by the official Varjo SDK for Custom
+Engines 4.16.0 and the Varjo developer documentation (developer.varjo.com),
+Copyright Varjo Technologies Oy. Because redistribution of Varjo SDK headers
+and binaries is restricted by the Varjo SDK license, this repository contains
+NEITHER varjo.h/Varjo.h NOR any Varjo DLL: the few API declarations the
+module needs are hand-written minimal prototypes in src/varjo_api.hpp, the
+vendor runtime (VarjoLib.dll) is located only at run time on machines where
+Varjo Base is installed, and no vendor code is linked or packaged.
+
+Varjo and Varjo Base are trademarks of Varjo Technologies Oy. This project is
+not affiliated with or endorsed by Varjo.

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Varjo Eye Tracking">
+  <title>Varjo Eye Tracking</title>
+  <desc>头显轮廓内的注视眼与视线，透明背景，单色在中性灰度下对深色与浅色主题都可读。</desc>
+  <g fill="none" stroke="#8C97AC" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 52 h88 a12 12 0 0 1 12 12 v12 a12 12 0 0 1 -12 12 h-30 l-8 -10 h-8 l-8 10 h-14 a12 12 0 0 1 -12 -12 v-12 a12 12 0 0 1 12 -12 z" />
+    <circle cx="52" cy="70" r="9" />
+    <circle cx="52" cy="70" r="2.5" fill="#8C97AC" stroke="none" />
+    <path d="M78 62 v16" />
+    <path d="M88 58 v24" />
+  </g>
+</svg>

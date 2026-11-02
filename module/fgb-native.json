@@ -1,0 +1,17 @@
+{
+  "ModuleId": "com.fgbbridge.varjo",
+  "ModuleName": "Varjo Eye Tracking",
+  "AuthorName": "Aqamoe (光水)",
+  "Version": "0.1.0",
+  "ModuleDescription": "运行时加载 Varjo 官方 C API，读取 Varjo 头显的眼动追踪数据（双眼/合并注视方向、睁眼度、瞳孔直径、辐辏距离），输出到 FaceGaze Bridge。不链接、不打包厂商 DLL，不注入进程。",
+  "UsageInstructions": "1. 安装并启动 Varjo Base，在「设置 → 眼动」中启用眼动追踪并完成校准（建议选「始终校准/记住我的校准」）。2. 使用带眼动追踪的 Varjo 头显（XR-3/XR-4 系列、VR-3/VR-4、Aero 等）并佩戴好。3. 关闭 VRCFaceTracking，避免与它的 Varjo 模块冲突。4. 在「模块」页把 Varjo Eye Tracking 设为启动并重启引擎。注意：睁眼度/瞳孔等眼测量在 Varjo 侧标注为实验特性且需 Varjo Base Pro 授权；本模块为社区未验证实现。",
+  "ModulePageUrl": "https://github.com/Aqamoe/FGB-VarjoModule",
+  "ModuleIcon": "icon.svg",
+  "DllFileName": "varjo-eyetracking.dll",
+  "AbiVersion": 2,
+  "Capabilities": [
+    "eyes",
+    "gaze"
+  ],
+  "RoleHint": "eyes"
+}

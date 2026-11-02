@@ -1,0 +1,50 @@
+name: 真机验收报告
+description: 提交 Varjo Eye Tracking 模块的实际设备验收结果
+title: "[验证] "
+labels: ["verification"]
+body:
+  - type: input
+    id: headset
+    attributes:
+      label: Varjo 头显型号
+      description: 例如 XR-4 / VR-3 / Aero（需带眼动追踪）
+    validations:
+      required: true
+  - type: input
+    id: base
+    attributes:
+      label: Varjo Base 版本
+      description: 是否带 Pro 授权请一并注明（决定睁眼度/瞳孔是否可用）
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: FaceGaze Bridge 版本
+    validations:
+      required: true
+  - type: input
+    id: module
+    attributes:
+      label: 模块版本（Release tag）
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: 结果
+      options:
+        - 全部正常
+        - 极化/左右反了
+        - 只有注视、没有睁眼度/瞳孔
+        - 检测不到 Varjo 运行时
+        - 崩溃
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 现象描述
+      description: 注视方向是否跟眼、睁眼度眨眼是否掉零、瞳孔量级是否合理、模块卡片显示什么
+    validations:
+      required: true

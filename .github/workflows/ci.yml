@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  module:
+    uses: Aqamoe/FGB-Module-Kit/.github/workflows/module-ci.yml@v0.4.0
+    with:
+      # 冒烟需要厂商运行时（VarjoLib.dll，由 Varjo Base 安装）与 Varjo 头显，
+      # GitHub 的 Windows runner 上两者都没有：跑起来只会验证「无运行时优雅失败」，
+      # 端到端意义有限，还会随机器环境漂移。真机冒烟只在本地跑：
+      #   cmake --build build --config Release --target smoke-test
+      run_smoke: false
+    secrets: inherit
